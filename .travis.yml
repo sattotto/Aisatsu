@@ -5,4 +5,4 @@ before_install:
 before_script:
     - set -o pipefail # For Debug Log
 script:
-    - xcodebuild test -project ./Aisatsu.xcodeproj -scheme AisatsuTest -configuration Debug -sdk iphonesimulator -destination `platform=iOS Simulator, OS11.3,name=iPhone8` | xcpretty -c # xcodebuild build and test
+    - xcodebuild test -project ./Aisatsu.xcodeproj -scheme AisatsuTest -configuration Debug -sdk iphonesimulator -destination 'platform=iOS Simulator, OS11.3,name=iPhone8' | xcpretty -c # xcodebuild build and test
