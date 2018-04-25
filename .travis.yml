@@ -1,0 +1,8 @@
+osx_image: xcode9.3 # Xcode Version
+language: objective-c # iOS Objective-C
+before_install:
+    - gem install xcpretty # xcodebuild appearance tool
+before_script:
+    - set -o pipefail # For Debug Log
+script:
+    - xcodebuild test -project ./Aisatsu.xcodeproj -scheme AisatsuTest -configuration Debug | xcpretty -c # xcodebuild build and test
